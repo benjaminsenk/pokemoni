@@ -1,0 +1,137 @@
+[
+    {
+        "ime": "Mewtwo",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "1",
+        "mega": "da",
+        "legendaren": "da",
+        "žival": "mačka"
+    },
+    {
+        "ime": "Blastoise",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "3",
+        "mega": "da",
+        "legendaren": "ne",
+        "žival": "želva"
+    },
+    {
+        "ime": "Moltres",
+        "tip": "2",
+        "shiny": "da",
+        "evolucija": "1",
+        "mega": "ne",
+        "legendaren": "da",
+        "žival": "ptič"
+    },
+    {
+        "ime": "Xerneas",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "1",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "jelen"
+    },
+    {
+        "ime": "Wyredeer",
+        "tip": "2",
+        "shiny": "ne",
+        "evolucija": "2",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "jelen"
+    },
+    {
+        "ime": "Rookidee",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "3",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "ptič"
+    },
+    {
+        "ime": "Braviary",
+        "tip": "2",
+        "shiny": "ne",
+        "evolucija": "2",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "ptič"
+    },
+    {
+        "ime": "Tirtouga",
+        "tip": "2",
+        "shiny": "da",
+        "evolucija": "2",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "želva"
+    },
+    {
+        "ime": "Beedrill",
+        "tip": "2",
+        "shiny": "da",
+        "evolucija": "3",
+        "mega": "da",
+        "legendaren": "ne",
+        "žival": "čebela"
+    },
+    {
+        "ime": "Combee",
+        "tip": "2",
+        "shiny": "ne",
+        "evolucija": "2",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "čebela"
+    },
+    {
+        "ime": "Liepard",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "2",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "mačka"
+    },
+    {
+        "ime": "Incineroar",
+        "tip": "2",
+        "shiny": "da",
+        "evolucija": "3",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "mačka"
+    },
+    {
+        "ime": "Pidgeot",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "3",
+        "mega": "da",
+        "legendaren": "ne",
+        "žival": "ptič"
+    },
+    {
+        "ime": "Torkoal",
+        "tip": "1",
+        "shiny": "ne",
+        "evolucija": "1",
+        "mega": "ne",
+        "legendaren": "ne",
+        "žival": "želva"
+    },
+    {
+        "ime": "Raikou",
+        "tip": "1",
+        "shiny": "da",
+        "evolucija": "1",
+        "mega": "ne",
+        "legendaren": "da",
+        "žival": "mačka"
+    }
+]
