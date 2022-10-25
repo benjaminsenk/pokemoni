@@ -6,10 +6,11 @@ games_json = "games.json"
 game_won = "W"
 game_start = "Z"
 
-# get list of pokemon
+# Sestavi seznam z lastnostmi pokemonov.
 with open("pokemoni.json", "r", encoding="utf-8") as dat:
     pokemons = json.load(dat)
 
+# Sestavi slovar, v katerem bodo vse lastnosti (npr. žival) in njihove možne vrednosti (npr. mačka)
 all_attributes = {}
 for pokemon in pokemons:
     for attribute, attribute_value in pokemon.items():
@@ -19,12 +20,13 @@ for pokemon in pokemons:
             all_attributes[attribute].add(attribute_value)
 
 
-# list of available IDs of pokemons. In the beggining all pokemons are in. When a pokemon is not available, 
-# it is deleted from the list
+# Seznam števil (id) za vsakega pokemona, ki je na voljo (od 0 do 14). 
+# Ko pokemon ni (več) na voljo, je njegov id izbrisan iz seznama.
 pokemon_list = []
 for i in range(len(pokemons)):
     pokemon_list.append(i)
 
+# Za vsako novo igro kopiramo seznam v nov seznam, iz katerega bomo brisali števila.
 pokemon_list1 = pokemon_list.copy()
 
 
@@ -46,6 +48,9 @@ class Game:
         else:
             self.all_guesses = all_guesses
 
+# V leftovers bodo ostali vse vrednosti atributov, ki jih še nismo ugibali. Ostale bodo vrednosti, tudi če so vsi pokemoni zanjo 
+# že prečrtani, saj funkcija ne gleda presekov množic ampak le ugibane vrednosti, se bodo pa zbrisali atributi, ki nimajo več kot ene
+# vrednosti (saj je ne bi bilo smiselno ugibati). Tako dobimo nov slovar vseh atributov za ugibanje.
     def attributes_leftovers(self):
         leftovers = {}
         for attribute, properties in all_attributes.items():
@@ -56,6 +61,7 @@ class Game:
             if len(possibilities) > 1:
                 leftovers[attribute] = possibilities            
         return leftovers
+
 
     @staticmethod
     def new_game():
