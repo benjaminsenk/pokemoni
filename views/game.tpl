@@ -49,12 +49,12 @@
     <tr>
     % if stanje == game.game_won:
     <td colspan="7"; style="text-align:center;">
-    <p>Čestitam. Uspelo ti je. Tvoj pokemon je {{ igra.pokemon['ime'] }}. Ugotovil si v {{ igra.num_tries }} poskusih.</p>
+    <p>Čestitke, ugotovil si pokemona {{ igra.pokemon['ime'] }}, uspelo ti je v {{ igra.num_tries }} poskusih.</p>
 
     <form action="/new_game/" method="post">
-        <button type="submit"; style="background-color:#ea8b8b; border-color:#C77575; 
+        <button type="submit"; style="background-color:#FF69B4; border-color:#FFC0CB; 
         color:white; font-size: 16px; font-family: Arial, Helvetica, 
-        sans-serif; padding: 5px;">Nova igra</button>
+        sans-serif; padding: 5px;">New Game</button>
       </form>
     % else:
     <td colspan="3"; style="text-align:center;">
@@ -69,12 +69,12 @@
             % end
         </optgroup>
         </select>
-            <button type="submit" name="kriterij"; style="background-color:#ea8b8b; border-color:#C77575;
+            <button type="submit" name="kriterij"; style="background-color:#FF69B4; border-color:#FFC0CB;
             color:white; font-size: 16px; font-family: Arial, Helvetica,
             sans-serif; padding: 5px;">Ugibaj</button>
         </form>
         <td colspan="3"; style="text-align:center;">
-          <p>Število poskusov: {{igra.num_tries}} </p>
+          <p>Number of tries: {{igra.num_tries}} </p>
         <td>
         <tr>
         <td colspan="7"; style="text-align:center;">

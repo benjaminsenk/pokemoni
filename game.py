@@ -10,13 +10,13 @@ game_start = "Z"
 with open("pokemoni.json", "r", encoding="utf-8") as dat:
     pokemons = json.load(dat)
 
-all_atrributes = {}
+all_attributes = {}
 for pokemon in pokemons:
     for attribute, attribute_value in pokemon.items():
-        if attribute not in all_atrributes:
-            all_atrributes[attribute] = {attribute_value}
+        if attribute not in all_attributes:
+            all_attributes[attribute] = {attribute_value}
         else:
-            all_atrributes[attribute].add(attribute_value)
+            all_attributes[attribute].add(attribute_value)
 
 
 # list of available IDs of pokemons. In the beggining all pokemons are in. When a pokemon is not available, 
@@ -48,13 +48,13 @@ class Game:
 
     def attributes_leftovers(self):
         leftovers = {}
-        for attribute, properties in all_atrributes.items():
-            posibilities = set()
+        for attribute, properties in all_attributes.items():
+            possibilities = set()
             for property in properties:
                 if (attribute, property) not in self.all_guesses:
-                    posibilities.add(property)
-            if len(posibilities) > 1:
-                leftovers[attribute] = posibilities            
+                    possibilities.add(property)
+            if len(possibilities) > 1:
+                leftovers[attribute] = possibilities            
         return leftovers
 
     @staticmethod
