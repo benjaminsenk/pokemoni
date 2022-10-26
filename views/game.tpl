@@ -71,7 +71,7 @@
         </select>
             <button type="submit" name="kriterij"; style="background-color:#FF69B4; border-color:#FFC0CB;
             color:white; font-size: 16px; font-family: Arial, Helvetica,
-            sans-serif; padding: 5px;">Ugibaj</button>
+            sans-serif; padding: 5px;">Guess</button>
         </form>
         <td colspan="3"; style="text-align:center;">
           <p>Number of tries: {{igra.num_tries}} </p>

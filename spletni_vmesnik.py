@@ -6,19 +6,20 @@ COOKIE = "idigre"
 
 guesspokemon = game.GuessPokemon(game.games_json)
 
-
+# Tabela pokemonov pred začetkom igre.
 @bottle.get("/")
 def index():
     return bottle.template("views/index.tpl")
 
-
+# Začnemo z igro, dobimo id igre, ustvari se seznam pokemonov, računalnik izbere pokemona, igra se shrani. Nato se nastavi piškotek.
 @bottle.post("/new_game/")
 def new_game():
     id_game = guesspokemon.new_game()
     bottle.response.set_cookie(COOKIE, str(id_game), path="/", secret=SECRET)
     bottle.redirect("/game/")
 
-
+# Uporabnik lahko ugiba pokemona (tabela s pokemoni, kjer so bodo črtali), sledi brisanje pokemonov iz seznama, igra in stanje se shranita. 
+# Zmaga ali nadaljevanje.
 @bottle.get("/game/")
 def show_game():
     id_game = int(bottle.request.get_cookie(COOKIE, secret=SECRET))

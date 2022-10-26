@@ -26,7 +26,7 @@ pokemon_list = []
 for i in range(len(pokemons)):
     pokemon_list.append(i)
 
-# Za vsako novo igro kopiramo seznam v nov seznam, iz katerega bomo brisali števila.
+# Kopiramo seznam v nov seznam, iz katerega bomo nato kopirali v prvotni seznam za vsako novo igro.
 pokemon_list1 = pokemon_list.copy()
 
 
@@ -48,9 +48,7 @@ class Game:
         else:
             self.all_guesses = all_guesses
 
-# V leftovers bodo ostali vse vrednosti atributov, ki jih še nismo ugibali. Ostale bodo vrednosti, tudi če so vsi pokemoni zanjo 
-# že prečrtani, saj funkcija ne gleda presekov množic ampak le ugibane vrednosti, se bodo pa zbrisali atributi, ki nimajo več kot ene
-# vrednosti (saj je ne bi bilo smiselno ugibati). Tako dobimo nov slovar vseh atributov za ugibanje.
+# V leftovers bodo ostale vse vrednosti atributov, ki jih še nismo ugibali, dobimo nov slovar vseh atributov za ugibanje.
     def attributes_leftovers(self):
         leftovers = {}
         for attribute, properties in all_attributes.items():
@@ -76,6 +74,8 @@ class Game:
     def increment_num_attempts(self):
         self.num_tries += 1
 
+# Iz seznama pokemonov izbriše pokemone. Če smo pravilno uganili lastnost pokemona, izbriše vse pokemone, ki te lastnosti nimajo, sicer
+# pa izbriše vse pokemone z ugibano lastnostjo.
     def guess(self, criterium, criterium_value):
         global pokemon_list
         pokemon_list = pokemon_list.copy()
@@ -133,6 +133,7 @@ class GuessPokemon:
             }
             # print (games)
 
+# V games.json zabeleži vsako igro, ki jo/smo jo igrali z id-jem, naključnim pokemonom,ugibi ter stanjem.
     def save_game(self):
         with open(self.games_file, "w", encoding="utf-8") as f:
             games = {
